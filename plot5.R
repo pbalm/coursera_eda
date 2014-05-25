@@ -25,7 +25,7 @@ NEIveh = NEIbaltimore[codeselector, ]
 # - split by year
 # - sum everything within one year
 # - plot it
-splitdata = split(NEIveh$Emissions, coalNEI$year)
+splitdata = split(NEIveh$Emissions, NEIveh$year)
 sums = sapply(splitdata, sum)
 df = data.frame(names(sums), sums)
 names(df) = c("year","totals")
